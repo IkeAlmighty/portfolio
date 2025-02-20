@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@theme {
+    --color-melon: #F5A68E;
+    --color-persian-pink: #F68DD0;
+    --color-jasmine: #FFE699;
+    --color-flame: #EC4E20;
+}
