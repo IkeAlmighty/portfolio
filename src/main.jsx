@@ -2,7 +2,7 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router';
 import RouterConfig from './RouterConfig.jsx';
 
-import NavBar from './components/Navbar.jsx';
+import NavBar from './components/NavBar.jsx';
 import Footer from './components/Footer.jsx';
 
 import './index.css'
