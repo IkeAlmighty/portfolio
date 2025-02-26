@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-    --color-melon: #F5A68E;
-    --color-persian-pink: #F68DD0;
-    --color-jasmine: #FFE699;
-    --color-flame: #EC4E20;
+  --color-melon: #f5a68e;
+  --color-persian-pink: #f68dd0;
+  --color-jasmine: #ffe699;
+  --color-flame: #ec4e20;
 }
