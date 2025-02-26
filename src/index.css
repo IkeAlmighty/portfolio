@@ -6,3 +6,7 @@
   --color-jasmine: #ffe699;
   --color-flame: #ec4e20;
 }
+
+h2 {
+  @apply text-4xl;
+}
