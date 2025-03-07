@@ -1,8 +1,9 @@
-import { useState } from "react";
-import { NavLink } from "react-router";
+import { useEffect, useState } from "react";
+import { NavLink, useLocation } from "react-router";
 
-export default function NavBar({ indexPath = "/" }) {
-  const [page, setPage] = useState(indexPath);
+export default function NavBar() {
+  const [page, setPage] = useState();
+  const location = useLocation();
 
   const classNames = {
     NavLink: "lg:text-2xl px-3 py-1 text-nowrap",
@@ -14,6 +15,10 @@ export default function NavBar({ indexPath = "/" }) {
     { pathname: "/contact", text: "Contact" },
     { pathname: "/resume", text: "Resume" },
   ];
+
+  useEffect(() => {
+    setPage(location.pathname);
+  }, [location])
 
   return (
     <div className="text-center mb-5">

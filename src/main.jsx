@@ -9,9 +9,9 @@ import "./index.css";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
-    <div className="m-2 p-2 max-w-[1000px] mx-auto">
-      <div className="mb-20">
-        <NavBar indexPath="/portfolio" />
+    <div className="m-2 p-2 max-w-[800px] mx-auto pb-[50px]">
+      <div className="mb-10">
+        <NavBar />
       </div>
       <RouterConfig />
       <Footer />
