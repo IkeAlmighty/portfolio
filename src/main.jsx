@@ -11,7 +11,7 @@ createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <div className="m-2 p-2 max-w-[1000px] mx-auto">
       <div className="mb-20">
-        <NavBar indexPath="/portfolio" />
+        <NavBar />
       </div>
       <RouterConfig />
       <Footer />
