@@ -1,6 +1,8 @@
 import { NavLink } from "react-router";
 import GridItem from "../components/GridItem";
 import GridLayout from "../components/GridLayout";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 export default function Portfolio() {
   const projectData = [
@@ -29,7 +31,7 @@ export default function Portfolio() {
     {
       githubLink: "https://github.com/ikealmighty/scones-ike-coffee.git",
       deploymentLink: "https://scones.ike.coffee",
-      imgSrc: "",
+      imgSrc: "sconelogo.png",
       title: "scones.ike.coffee",
       description:
         "A microbakery order fulfillment website. Written in Sveltekit, uses Stripe Payment API for payment processing.",
@@ -37,7 +39,7 @@ export default function Portfolio() {
     {
       githubLink: "https://github.com/ikealmighty/sorcerersoup.git",
       deploymentLink: "https://sorcerersoup.com",
-      imgSrc: "",
+      imgSrc: "sorcerersoup.png",
       title: "Sorcerer Soup",
       description:
         "A Computer Assisted TTRPG. Written in Sveltekit, with Mongodb. ",
@@ -55,34 +57,38 @@ export default function Portfolio() {
     <div>
       <div className="p-2 text-center">
         <h2>Projects</h2>
-        <div className="mt-2 text-sm italic text-zinc-600">
-          Click on project card to go to github repository, or click on
-          deployment link to see a project live.
-        </div>
       </div>
       <GridLayout>
-        {projectData.map((project) => (
-          <NavLink to={project.githubLink}>
+        {projectData.map((project, index) => (
+          <div key={index}>
             <GridItem>
-              <div className="p-5">
-                <div className="text-2xl">{project.title}</div>
+              <div className={`p-5`}>
+                {project.imgSrc && <img className="rounded h-[150px] object-fit mx-auto mb-5" src={`src/assets/${project.imgSrc}`} alt="project-image" />}
+                <div className="text-2xl">
+                  {project.deploymentLink ?
+                    <NavLink to={project.deploymentLink} target="_blank">
+                      {project.title}
+                      <FontAwesomeIcon className="mx-2" icon={faUpRightFromSquare} />
+                    </NavLink>
+                    :
+                    <span>{project.title}</span>
+                  }
+                </div>
                 <div className="text-xs">{project.description}</div>
                 <div className="text-sm">
-                  {project.deploymentLink && (
-                    <span>
-                      Deployment:{" "}
-                      <NavLink
-                        to={project.deploymentLink}
-                        className="text-blue-600"
-                      >
-                        {project.deploymentLink}
-                      </NavLink>
-                    </span>
+                  {project.githubLink && (
+                    <NavLink
+                      to={project.githubLink}
+                      target="_blank"
+                      className="text-blue-600"
+                    >
+                      GitHub Repository
+                    </NavLink>
                   )}
                 </div>
               </div>
             </GridItem>
-          </NavLink>
+          </div>
         ))}
       </GridLayout>
     </div>
