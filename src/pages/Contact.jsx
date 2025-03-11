@@ -15,13 +15,16 @@ export default function Contact() {
             type="text"
             placeholder="Callback # or Email"
             className="block my-5 p-3 border-black border-2 rounded w-full max-w-sm"
+            required
           />
         </label>
 
         <label>
           <div>Message: </div>
-          <textarea placeholder="Your message here..." className="block my-5 p-3 border-black border-2 rounded w-full max-w-sm h-[200px]"></textarea>
+          <textarea required placeholder="Your message here..." className="block my-5 p-3 border-black border-2 rounded w-full max-w-sm h-[200px]"></textarea>
         </label>
+
+        <input type="submit" value="Submit" className="border-1 rounded cursor-pointer py-2 px-3 hover:text-white hover:bg-black hover:animate-pulse" />
       </form>
     </div>
   );
