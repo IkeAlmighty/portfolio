@@ -8,7 +8,7 @@ export default function Contact() {
 
       <hr />
 
-      <div className="text-4xl my-10 cursor-pointer text-sky-800">
+      <div className="text-2xl my-10 cursor-pointer text-sky-800">
         <a href="mailto:isaacyates7@gmail.com">IsaacYates7@gmail.com</a>
       </div>
     </div>
