@@ -5,7 +5,7 @@ import { NavLink } from "react-router";
 export default function Project({ project }) {
     return (
         <div className={`p-5`}>
-            {project.imgSrc && <img className="rounded h-[150px] object-fit mx-auto mb-5" src={`src/assets/${project.imgSrc}`} alt="project-image" />}
+            {project.imgSrc && <img className="rounded h-[150px] object-fit mx-auto mb-5" src={project.imgSrc} alt="project-image" />}
             <div className="text-2xl">
                 {project.deploymentLink ?
                     <NavLink to={project.deploymentLink} target="_blank">
