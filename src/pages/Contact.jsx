@@ -1,4 +1,9 @@
 export default function Contact() {
+
+  function handleSubmit(e) {
+    e.preventDefault();
+  }
+
   return (
     <div>
       <h1>Contact Form</h1>
@@ -8,12 +13,12 @@ export default function Contact() {
 
       <hr />
 
-      <form className="my-5">
+      <form className="my-5" onSubmit={handleSubmit}>
         <label>
           <div className="">Contact Info: </div>
           <input
-            type="text"
-            placeholder="Callback # or Email"
+            type="email"
+            placeholder="Email"
             className="block my-5 p-3 border-black border-2 rounded w-full max-w-sm"
             required
           />
