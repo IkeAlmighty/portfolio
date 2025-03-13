@@ -3,6 +3,7 @@ export default function About() {
     <div className="px-2">
       <div><h1>About ike</h1></div>
       <div>
+        <img src="/assets/selfportrait.jpg" alt="self portrait" className="rounded my-3" />
 
         <p className="py-3">
           I am a web developer, experienced barista, and owner of a scone cottage food bakery in South Minneapolis. My main hobby project is a computer assisted TTRPG called Sorcerer Soup.

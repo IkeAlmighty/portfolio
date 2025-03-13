@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router";
 
-export default function NavBar() {
+export default function Navigation() {
   const [page, setPage] = useState();
   const location = useLocation();
 
@@ -22,6 +22,7 @@ export default function NavBar() {
 
   return (
     <div className="text-center mb-5">
+      <div className="text-2xl mb-3">ike Yates</div>
       <nav>
         <ul>
           <li>
